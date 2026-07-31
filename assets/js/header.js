@@ -80,11 +80,11 @@ function initHeader() {
       '<button class="flex items-center gap-1.5 px-4 py-2.5 rounded-full bg-[#182023] border border-[#2d3a3e] text-gray-200 hover:text-[#c9a050] hover:border-[#c9a050] transition-all text-xs font-bold uppercase tracking-wider">' +
       '<svg class="w-4 h-4 text-[#c9a050]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.5 20.25a8.25 8.25 0 0 1 15 0"/></svg>' +
       '<span>Login</span></button>';
-    desktopSlot.querySelector('button').addEventListener('click', () => openAuthModal('customer', 'login'));
+    desktopSlot.querySelector('button').addEventListener('click', () => window.location.href = 'login.html');
 
     mobileSlot.innerHTML =
       '<button class="w-full py-3 rounded-full bg-[#182023] border border-[#2d3a3e] text-white font-bold text-xs uppercase tracking-widest text-center shadow-lg hover:border-[#c9a050]">Login / Sign Up</button>';
-    mobileSlot.querySelector('button').addEventListener('click', () => openAuthModal('customer', 'login'));
+    mobileSlot.querySelector('button').addEventListener('click', () => window.location.href = 'login.html');
   }
 }
 

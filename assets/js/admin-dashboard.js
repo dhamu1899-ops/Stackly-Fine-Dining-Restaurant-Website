@@ -117,32 +117,10 @@
   document.querySelectorAll('[data-open-add-menu]').forEach(btn => btn.addEventListener('click', () => addModal.classList.remove('hidden')));
   document.getElementById('ad-add-menu-close').addEventListener('click', () => addModal.classList.add('hidden'));
 
-  document.getElementById('ad-add-menu-form').addEventListener('submit', (e) => {
-    e.preventDefault();
-    const name = document.getElementById('ad-new-name').value;
-    const price = document.getElementById('ad-new-price').value;
-    const image = document.getElementById('ad-new-image').value;
-    if (!name || !price || !image) return;
-
-    menuItems = [Auth.addMenuItem({
-      name,
-      price: parseFloat(price) || 35.0,
-      description: document.getElementById('ad-new-desc').value || 'Executive chef special preparation.',
-      image,
-      category: document.getElementById('ad-new-category').value,
-      mealType: document.getElementById('ad-new-mealtype').value,
-      rating: 5.0,
-      tags: ['Executive Chef', 'New Arrival', 'Signature'],
-      calories: 550,
-      prepTime: '20 min',
-      isPopular: true
-    }), ...menuItems];
-
-    e.target.reset();
-    addModal.classList.add('hidden');
-    renderMenuCatalog();
-    renderStats();
-  });
+  // No backend exists to receive a newly-created dish, so once every
+  // field is genuinely filled in the admin is sent to the 404 page
+  // rather than shown a catalog entry nothing actually persisted.
+  wireFormRedirect('ad-add-menu-form', '404.html');
 
   renderStats();
   renderReservationsTable();

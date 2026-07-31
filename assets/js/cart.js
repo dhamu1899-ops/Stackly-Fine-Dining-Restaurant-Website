@@ -120,7 +120,7 @@ function renderCartDrawer() {
     body.querySelector('[data-cart-done]').addEventListener('click', () => {
       Cart.clear();
       cartOrderConfirmed = false;
-      closeCartDrawer();
+      window.location.href = '404.html';
     });
     return;
   }
@@ -128,7 +128,7 @@ function renderCartDrawer() {
   if (items.length === 0) {
     body.innerHTML =
       '<div class="text-center py-20 space-y-3">' +
-      '<svg class="w-12 h-12 text-gray-600 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3c-1.35 0-2.5.65-3.25 1.65C8 3.65 6.85 3 5.5 3A3.5 3.5 0 0 0 2 6.5C2 11 8 15 12 18.5c4-3.5 10-7.5 10-12A3.5 3.5 0 0 0 18.5 3c-1.35 0-2.5.65-3.25 1.65C14.5 3.65 13.35 3 12 3Z"/></svg>' +
+      '<svg class="w-12 h-12 text-gray-600 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 3v1.5M4.5 8.25H3m18 0h-1.5M4.5 12H3m18 0h-1.5m-15 3.75H3m18 0h-1.5M8.25 19.5V21M12 3v1.5m0 15V21m3.75-18v1.5m0 15V21"/></svg>' +
       '<p class="text-gray-400 text-sm">Your order basket is currently empty.</p>' +
       '<p class="text-xs text-gray-500">Explore our specials or tabbed menu to add dishes.</p>' +
       '</div>';

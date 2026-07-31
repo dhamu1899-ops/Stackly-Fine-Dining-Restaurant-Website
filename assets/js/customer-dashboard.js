@@ -19,7 +19,7 @@
   const orders = Auth.getOrders().filter(o => o.userId === user.id || o.userName === user.name);
 
   document.getElementById('cd-banner-title').textContent = 'Welcome, ' + user.name;
-  document.getElementById('cd-avatar').src = user.avatar || 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=200';
+  document.getElementById('cd-avatar').src = user.avatar || 'assets/images/photo-1534528741775-53994a69daeb.webp';
   document.getElementById('cd-name').textContent = user.name;
   document.getElementById('cd-tier').textContent = (user.vipTier || 'Platinum') + ' VIP';
   document.getElementById('cd-email').textContent = user.email + ' • Salem Member';
