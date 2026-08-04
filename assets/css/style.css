@@ -181,3 +181,30 @@ h1, h2, h3, h4, h5, h6, .font-serif {
   padding-bottom: 0;
   border: none;
 }
+
+@media (max-width: 360px) {
+  .hero-content {
+    padding: 20px;
+    gap: 12px;
+  }
+
+  .hero-title {
+    font-size: 1.8rem;
+    line-height: 1.2;
+  }
+
+  .hero-subtitle,
+  .hero-tagline {
+    font-size: 0.95rem;
+  }
+
+  .hero-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .hero-buttons a {
+    width: 100%;
+  }
+}
